@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.scott.demo.taxation.TaxationActivity"
+
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="薪金：" />
+
+        <EditText
+            android:id="@+id/et_salary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_taxation_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="您应交税："/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_calculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="计算"/>
+        <Button
+            android:id="@+id/bt_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重置"/>
+    </LinearLayout>
+</LinearLayout>

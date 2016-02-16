@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bt_simple_noti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="简单的通知"/>
+        <Button
+            android:id="@+id/bt_big_view_noti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="大视图通知"/>
+        <Button
+            android:id="@+id/download_view_noti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="下载"/>
+    </LinearLayout>
+
+</LinearLayout>

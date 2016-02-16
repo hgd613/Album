@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.scott.demo"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    productFlavors {
+
+        wandoujia {}
+        baidu {}
+        c360 {}
+        uc {}
+
+        productFlavors.all {
+            flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:22.2.1'
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.android.support:design:22.2.1'
+    compile 'com.google.android.gms:play-services:7.5.0'
+    compile files('libs/nineoldandroids-library-2.4.0.jar')
+    compile files('libs/AMap_Location_v2.0.0_20151117.jar')
+    compile files('libs/AMap_2DMap_v2.6.0_20150916.jar')
+    compile files('libs/AMap_3DMap_v2.6.0_20150914.jar')
+    compile files('libs/AMap_Search_v2.6.0_20150914.jar')
+    compile files('libs/android-support-v4.jar')
+    compile files('libs/jg_filter_sdk_1.1.jar')
+    compile files('libs/mid-sdk-2.20.jar')
+    compile files('libs/Xg_sdk_v2.39_20150915_1121.jar')
+    compile files('libs/wup-1.0.0-SNAPSHOT.jar')
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile'com.android.support:recyclerview-v7:23.1.1'
+}
